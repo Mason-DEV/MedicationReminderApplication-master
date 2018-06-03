@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Creates Toolbar  -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/editToolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:background="@color/colorPolyPurple"
+        android:fontFamily="@font/ubuntu_r"
+        app:theme="@style/ToolbarStyle">
+    </android.support.v7.widget.Toolbar>
+
+    <!-- Layouts for content is here.  -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/editmedicationTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:focusable="true"
+            android:fontFamily="@font/ubuntu_r"
+            android:text="@string/Med_titleEDIT"
+            android:textSize="18sp"
+            android:textStyle="bold"
+
+            />
+
+
+        <EditText
+            android:id="@+id/editmedicationNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_below="@+id/editmedicationTitleTextView"
+            android:background="@color/colorSilver"
+            android:ems="10"
+            android:inputType="textPersonName"
+            />
+
+
+        <TextView
+            android:id="@+id/editcurrentTitleTextView"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Current_title"
+            android:layout_below="@+id/editmedicationNameEditText"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/ubuntu_r"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+
+
+            />
+
+        <EditText
+            android:id="@+id/editcurrentEditText"
+            android:layout_width="180dp"
+            android:layout_height="45dp"
+            android:layout_alignStart="@+id/editcurrentTitleTextView"
+            android:layout_alignTop="@+id/editunitSpinner"
+            android:background="@color/colorSilver"
+            android:gravity="center"
+            android:hint="30.0"
+
+            android:inputType="numberDecimal"
+            android:textCursorDrawable="@color/colorPolyPurple" />
+
+
+
+
+        <TextView
+            android:id="@+id/editunitTitleTextView"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Unit_title"
+            android:layout_below="@+id/editmedicationNameEditText"
+            android:layout_toEndOf="@+id/editcurrentTitleTextView"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/ubuntu_r"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+
+            />
+
+
+        <Spinner
+            android:id="@+id/editunitSpinner"
+            android:layout_width="180dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/editunitTitleTextView"
+            android:layout_toEndOf="@+id/editcurrentEditText"
+            android:entries="@array/unit_items"
+            android:spinnerMode="dialog"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            />
+
+
+
+        <TextView
+            android:id="@+id/editreasonTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editcurrentEditText"
+            android:layout_marginTop="10dp"
+            android:text="@string/Reason_title"
+            android:fontFamily="@font/ubuntu_r"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+
+            />
+
+
+        <EditText
+            android:id="@+id/editreasonNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:lines="5"
+            android:minLines="2"
+            android:maxLines="10"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_below="@+id/editreasonTitleTextView"
+            android:background="@color/colorSilver"
+            android:ems="10"
+            android:inputType="textPersonName|textMultiLine"
+            />
+
+
+        <TextView
+            android:id="@+id/editdoctorTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editreasonNameEditText"
+            android:layout_marginTop="10dp"
+            android:text="@string/Doctor_title"
+            android:fontFamily="@font/ubuntu_r"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+
+            />
+
+
+        <EditText
+            android:id="@+id/editdoctorNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_below="@+id/editdoctorTitleTextView"
+            android:background="@color/colorSilver"
+            android:ems="10"
+            android:inputType="textPersonName"
+            />
+
+        <Button
+            android:id="@+id/editscheduleBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editdoctorNameEditText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPolyPurple"
+            android:onClick="EditMedicationButton"
+            android:text="@string/schedule_btn"
+            android:textColor="@color/colorWhite" />
+
+
+
+    </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

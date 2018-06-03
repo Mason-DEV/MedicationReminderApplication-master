@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!-- Creates Toolbar  -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/patientToolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:background="@color/colorPolyPurple"
+        android:fontFamily="@font/ubuntu_r"
+        app:theme="@style/ToolbarStyle">
+    </android.support.v7.widget.Toolbar>
+
+    <!-- Layouts for content is here.  -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <EditText
+            android:id="@+id/nameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:ems="15"
+            android:hint="Patient Name"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/addPatientButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nameText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="65dp"
+            android:background="@color/colorPolyPurple"
+            android:onClick="addPatient"
+            android:text="Done"
+            android:textColor="@color/colorWhite"
+
+            />
+    </RelativeLayout>
+
+</LinearLayout>

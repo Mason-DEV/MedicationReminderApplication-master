@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+        <PreferenceCategory
+            android:title="General Preferences">
+
+            <CheckBoxPreference
+                android:key="Vibration"
+                android:title="Vibration"
+                android:summary="Enable Vibration?"
+                android:defaultValue="false"/>
+        </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Alert Preferences">
+    <ListPreference
+
+        android:key="pref_reminderType"
+        android:title="Reminder Type"
+        android:summary="What type of reminder?"
+        android:entries="@array/entries_reminderType"
+        android:entryValues="@array/entryvalues_reminderType"
+        android:defaultValue="Alert" />
+
+    <ListPreference
+
+        android:key="pref_snoozeSettings"
+        android:title="Snooze Duration"
+        android:summary="How long would you like to snooze?"
+        android:entries="@array/entries_snoozeSettings"
+        android:entryValues="@array/entryvalues_snoozeSettings"
+        android:defaultValue="1" />
+
+    <ListPreference
+
+        android:key="pref_soundRepeatNum"
+        android:title="Alert Sound Repeat"
+        android:summary="How many times should the alert repeat?"
+        android:entries="@array/entries_repeatSettings"
+        android:entryValues="@array/entryvalues_repeatSettings"
+        android:defaultValue="1" />
+
+    </PreferenceCategory>
+    </PreferenceScreen>
+

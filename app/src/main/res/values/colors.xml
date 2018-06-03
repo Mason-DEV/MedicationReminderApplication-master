@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorCrimson">#DC143C</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorOffWhite">#eee9e9</color>
+    <color name="colorLightGrey">#cdc9c9</color>
+    <color name="colorButtonGrey">#7f7f7f</color>
+    <color name="colorPolyPurple">#532d8e</color>
+    <color name="colorSilver">#E6E6E6</color>
+
+</resources>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!-- Creates Toolbar  -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/patientToolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:background="@color/colorPolyPurple"
+        android:fontFamily="@font/ubuntu_r"
+        app:theme="@style/ToolbarStyle">
+    </android.support.v7.widget.Toolbar>
+
+    <!-- Layouts for content is here.  -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ListView
+            android:id="@+id/patientsListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:layout_above="@+id/patientButton"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="104dp"
+            android:alpha=".7"
+            android:divider="@xml/dash"
+            android:dividerHeight="10dp"
+            android:fadeScrollbars="false"
+            android:layerType="software"
+            android:scrollbars="vertical" />
+
+        <Button
+            android:id="@+id/patientButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="88dp"
+            android:layout_marginStart="33dp"
+            android:layout_toEndOf="@+id/editText"
+            android:background="@color/colorPolyPurple"
+            android:onClick="addNewPatient"
+            android:text="@string/add_btn"
+            android:textColor="@color/colorWhite" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/patientButton"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="58dp"
+            android:ems="10"
+            android:hint="Patient To Change To"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/editText"
+            android:layout_marginStart="60dp"
+            android:background="@color/colorPolyPurple"
+            android:onClick="changePatient"
+            android:text="Change Patient"
+            android:textColor="@color/colorWhite" />
+
+    </RelativeLayout>
+
+</LinearLayout>
